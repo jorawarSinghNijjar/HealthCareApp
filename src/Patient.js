@@ -26,7 +26,7 @@ class Patient extends React.Component {
     handleNameInput = e => {
         e.preventDefault();
         this.setState({
-        name: e.target.value
+        name: e.target.value.toUpperCase()
     });
   };
 

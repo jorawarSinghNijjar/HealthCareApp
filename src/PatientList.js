@@ -1,62 +1,74 @@
-import React from 'react'
-import api from './api/data_api';
+import React from "react";
+import PatientListItem from "./PatientListItem";
+import api from "./api/data_api";
 
 class PatientList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      patientList: []
+    };
+  }
 
-    constructor (props){
-        super (props);
-        this.state = {
-            patientList: []
-        }
+  componentDidMount() {
+    this.getData();
+  }
 
-    }
-
-    componentDidMount(){
-        this.getData();
-        
-    }
-
-    getData = async () => {
-        const response = await api.get('/patients')
-        .then(result => {
-
-            console.log(result.data.data);
-            this.setState({
-                patientList: result.data.data
-            });
-        })
-        .catch(err => console.log(err));
-
-    }
-
-    handleClick = (e) => {
-        e.preventDefault();
-        console.log(this.props);
-        console.log(e.target);
-    }
-
-    renderPatientList(){
-        return this.state.patientList.map(patient => {
-            return <div className="list-group-item" key={patient.id}>{patient.id}: {patient.name}</div>;
+  getData = async () => {
+    const response = await api
+      .get("/patients")
+      .then(result => {
+        console.log(result.data.data);
+        this.setState({
+          patientList: result.data.data
         });
+      })
+      .catch(err => console.log(err));
+  };
 
-    }
+  handleClick = e => {
+    e.preventDefault();
+    // console.log(e.target);
+  };
 
-    render(){
-        return(
-            <div className="container">
-                <div className="card-body">
-                    <h1 className="card-title text-center">Patient List</h1>
-                    <div className="row">
-                        <div className="col">
-                            <div className="list-group" onClick={this.handleClick}> 
-                                {this.renderPatientList()}
-                            </div>
-                        </div> 
-                    </div>
-                </div>    
+  renderPatientList() {
+    return this.state.patientList.map(patient => {
+      return <PatientListItem patient={patient} />;
+    });
+  }
+
+  render() {
+    return (
+      <div className="container">
+        <div className="row my-4">
+          <div className="col-sm">
+            <h1 className="text-center">Patient List</h1>
+          </div>
+          <div className="col-sm">
+            <form>
+              <div className="form-group my-2">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Search Patient"
+                ></input>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm">
+            <div
+              className="accordion"
+              id="accordion"
+              onClick={this.handleClick}
+            >
+              {this.renderPatientList()}
             </div>
-        );
-    }
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 export default PatientList;
