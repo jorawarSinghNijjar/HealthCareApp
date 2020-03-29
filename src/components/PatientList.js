@@ -1,6 +1,6 @@
 import React from "react";
 import PatientListItem from "./PatientListItem";
-import api from "./api/data_api";
+import api from "../api/data_api";
 
 class PatientList extends React.Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class PatientList extends React.Component {
   }
 
   getData = async () => {
-    const response = await api
+    await api
       .get("/patients")
       .then(result => {
         console.log(result.data.data);
@@ -42,10 +42,10 @@ class PatientList extends React.Component {
       <div className="container">
         <div className="row my-4">
           <div className="col-sm">
-            <h1 className="text-center">Patient List</h1>
+            <h1 className="text-left">Patient List</h1>
           </div>
           <div className="col-sm">
-            <form>
+            <form className="mx-auto">
               <div className="form-group my-2">
                 <input
                   type="text"

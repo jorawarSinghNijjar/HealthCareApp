@@ -1,5 +1,5 @@
 import React from "react";
-import api from './api/data_api';
+import api from '../api/data_api';
 import {Link} from 'react-router-dom';
 
 class Patient extends React.Component {
@@ -48,7 +48,7 @@ class Patient extends React.Component {
   onSubmit = async (e) => {
     e.preventDefault();
     let data = [this.state.name,this.state.phoneNumber,this.state.diseaseType];
-    const response = await api.post('/patient',{ data })
+    await api.post('/patient',{ data })
     .then(result => {
         if(!result.data.error){
             this.showAlert(result.data.message);
@@ -63,12 +63,12 @@ class Patient extends React.Component {
       <div className="container">
         <div className="alert alert-success" ref={this.alertRef}>{this.state.alertMessage}</div>
         <div className="row">
-          <div className="col-sm">
-            <div className="card my-4 w-75 mx-auto shadow p-3 mb-5 bg-white rounded">  
+          <div className="col-md-8 mx-auto">
+            <div className="card my-4 shadow p-3 mb-5 bg-white rounded">  
               <div className="card-body">
               <h1 className="card-title text-center">Patient Input Form</h1>
-                <form id="patient-form" className="w-75 mx-auto" >
-                  <div className="form-group">
+                <form id="patient-form" className="mx-auto" >
+                  <div className="form-group col-md">
                     <label htmlFor="name">Name: </label>
                     <input
                       type="text"
@@ -79,7 +79,7 @@ class Patient extends React.Component {
                       value={this.state.name}
                     ></input>
                   </div>
-                  <div className="form-group">
+                  <div className="form-group col-md">
                     <label htmlFor="phone-number">Phone number: </label>
                     <input
                       type="text"
@@ -90,7 +90,7 @@ class Patient extends React.Component {
                       value={this.state.phoneNumber}
                     ></input>
                   </div>
-                  <div className="form-group">
+                  <div className="form-group col-md">
                     <label htmlFor="disease-type">Type of diseases: </label>
                     <input
                       type="text"
@@ -101,17 +101,17 @@ class Patient extends React.Component {
                       value={this.state.diseaseType}
                     ></input>
                   </div>
-                  <div className="form-group text-center">
+                  <div className="form-group text-center col-md">
                     <Link to="/patient-list">
                     <button
-                      className="btn btn-primary mx-2"
+                      className="btn btn-primary btn-block my-2"
                       onClick={this.onSubmit}
-                      hre
+                      
                     >
                       Register
                     </button>
                     </Link>
-                    <button className="btn btn-danger mx-2">Cancel</button>
+                    <button className="btn btn-danger btn-block my-2">Cancel</button>
                   </div>
                 </form>
               </div>

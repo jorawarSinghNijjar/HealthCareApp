@@ -1,5 +1,5 @@
 import React from 'react'
-import api from "./api/data_api";
+import api from "../api/data_api";
 
 class PatientProfile extends React.Component{
     constructor(props){
@@ -30,7 +30,7 @@ class PatientProfile extends React.Component{
                                 <p>Doctor assigned: Dr.Yogesh Krotania</p>
                             </div>
                             <div className="col-sm text-center">
-                                <img className="img-thumbnail" src="patient-icon.png" alt="profile-photo"></img>
+                                <img className="img-thumbnail" src="patient-icon.png" alt="patient"></img>
                             </div>
                         </div>
                         <hr/>

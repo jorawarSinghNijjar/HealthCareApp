@@ -2,10 +2,7 @@ import React from "react";
 import PatientProfile from './PateintProfile';
 
 class PatientListItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
+ 
   render() {
     console.log(this.props);
     return (
