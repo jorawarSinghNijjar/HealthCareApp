@@ -1,5 +1,6 @@
 import React from "react";
 import api from './api/data_api';
+import {Link} from 'react-router-dom';
 
 class Patient extends React.Component {
     constructor(){
@@ -19,7 +20,7 @@ class Patient extends React.Component {
         this.alertRef.current.style.display = "block";
         setTimeout(() => {
             this.alertRef.current.style.display="none";
-        },5000);
+        },2000);
         
     }
 
@@ -66,7 +67,7 @@ class Patient extends React.Component {
             <div className="card my-4 w-75 mx-auto shadow p-3 mb-5 bg-white rounded">  
               <div className="card-body">
               <h1 className="card-title text-center">Patient Input Form</h1>
-                <form id="patient-form" className="w-75 mx-auto">
+                <form id="patient-form" className="w-75 mx-auto" >
                   <div className="form-group">
                     <label htmlFor="name">Name: </label>
                     <input
@@ -101,12 +102,15 @@ class Patient extends React.Component {
                     ></input>
                   </div>
                   <div className="form-group text-center">
+                    <Link to="/patient-list">
                     <button
                       className="btn btn-primary mx-2"
                       onClick={this.onSubmit}
+                      hre
                     >
                       Register
                     </button>
+                    </Link>
                     <button className="btn btn-danger mx-2">Cancel</button>
                   </div>
                 </form>

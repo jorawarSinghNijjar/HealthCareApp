@@ -1,10 +1,21 @@
 import React from 'react'
-
+import api from "./api/data_api";
 
 class PatientProfile extends React.Component{
     constructor(props){
         super(props);
         console.log(this.props.patient.name)
+    }
+
+    handleDelete = async () =>{
+        await api.delete('/patient',{
+            params:{
+                id: this.props.patient.id
+            }       
+        }).then(result => {
+            console.log("Deleted successfully");
+        })
+        .catch(err => console.log(err));
     }
     render(){
         
@@ -28,7 +39,7 @@ class PatientProfile extends React.Component{
                                 <button className="btn btn-warning btn-lg">Edit</button>
                             </div>
                             <div className="col-sm text-center">
-                                <button className="btn btn-danger btn-lg">Delete</button>
+                                <button className="btn btn-danger btn-lg" onClick={this.handleDelete}>Delete</button>
                             </div>
                 
                         </div>

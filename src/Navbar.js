@@ -23,12 +23,12 @@ class Navbar extends React.Component {
               <li className="nav-item">
                 <Link className="nav-link" to="/home">
                   Home
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/patient-list">
                   Patient List
-                </Link>{" "}
+                </Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/patient/register">
@@ -36,9 +36,9 @@ class Navbar extends React.Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/login">
+                <Link className="nav-link" to="/">
                   Login
-                </Link>{" "}
+                </Link>
               </li>
             </ul>
           </div>
