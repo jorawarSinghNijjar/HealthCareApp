@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
 body{
   margin:0;
   padding:0;
@@ -38,3 +40,10 @@ body{
 .mt-30{
   margin-top: 30vh; 
 }
+
+#list-item:hover{
+  background-color: #01295f;
+  color:white !important;
+}
+
+
