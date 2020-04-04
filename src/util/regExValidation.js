@@ -2,10 +2,13 @@
 const namePatt = /[a-zA-Z\s]{1,50}/ig;
 
 const checkName = (str) => {
-    if(!namePatt.test(str)){
+    if(namePatt.test(str)){
+        return true;
+    }
+    else{
         return false;
     }
-    return true;
+    
 }
 
 //Checks 10 digit phone number with or without (-)'s

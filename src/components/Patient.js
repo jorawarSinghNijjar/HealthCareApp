@@ -57,7 +57,7 @@ class Patient extends React.Component {
     handleNameInput = e => {
         e.preventDefault();
         this.setState({
-        name: e.target.value.toUpperCase(),
+        name: e.target.value,
         showErrMessageName:false
     });
   };
@@ -106,27 +106,42 @@ class Patient extends React.Component {
       valid = false;
     }
 
-    if(!checkName(this.state.name)){
-      this.setState({
-        errMessageName: "Please enter a valid name",
-        showErrMessageName:true
-      }); 
-      valid = false;
-    }
+    // if(!checkName(this.state.name)){
+      
+    //   this.setState({
+    //     errMessageName: "Please enter a valid name",
+    //     showErrMessageName:true
+    //   }); 
+    //   valid = false;
+    // }
+    // else{
+      
+    //   this.setState({
+    //     showErrMessageName:false
+    //   }); 
+    //   valid = true;
+    // }
 
-    if(!checkPhoneNumber(this.state.phoneNumber)){
-      this.setState({
-        errMessagePhoneNumber: "Please enter a valid phone number!",
-        showErrMessagePhoneNumber:true
-      }); 
-      valid = false;
-    }
+    // if(!checkPhoneNumber(this.state.phoneNumber)){
+    //   this.setState({
+    //     errMessagePhoneNumber: "Please enter a valid phone number!",
+    //     showErrMessagePhoneNumber:true
+    //   }); 
+    //   valid = false;
+    // }
+    // else{
+    //   this.setState({
+    //     showErrMessagePhoneNumber:false
+    //   }); 
+    //   valid = true;
+    // }
 
     return valid;
   }
 
   onSubmit = async (e) => {
     e.preventDefault();
+    console.log(checkName(this.state.name))
     if(!this.validate()){
       e.stopPropagation();
       return false;

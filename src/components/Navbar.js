@@ -66,12 +66,12 @@ class Navbar extends React.Component {
     return (
       <div style={{ display: `${this.state.navbarDisplay}` }}>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">
+          <Link to="/" className="navbar-brand">
             <img
               className="float-left"
               src="/images/healthcare-365-logo.png"
             ></img>
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

@@ -5,38 +5,42 @@ import PatientList from "./components/PatientList";
 import Navbar from "./components/Navbar";
 import HomePage from "./components/HomePage";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
-import history from './components/history';
+import history from "./components/history";
 import SignUp from "./components/SignUp";
 import LandingPage from "./components/LandingPage";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
-
   state = {
-    loggedIn: false
+    loggedIn: true
   };
 
   render() {
     return (
       <div>
         <Router history={history}>
-        <Navbar loggedIn={this.state.loggedIn ? true : false}/>
+          <Navbar loggedIn={this.state.loggedIn ? true : false} />
           <Switch>
             <Route exact path="/" component={LandingPage}></Route>
-            
             <Route exact path="/login" component={LoginPage}></Route>
             <Route exact path="/login/pwd">
-              <Redirect to="/login/pwd" /><LoginPage passwordForm />
-            </Route> 
+              <Redirect to="/login/pwd" />
+              <LoginPage passwordForm />
+            </Route>
             <Route exact path="/home" component={HomePage}></Route>
             <Route exact path="/patient/register">
-              <Patient submitButtonText="Register"/>
+              <Patient submitButtonText="Register" />
             </Route>
-            <Route path="/patient/edit/:id" render={({match}) => <Patient match={match} editMode submitButtonText="Update"/>}>
-            </Route>
+            <Route
+              path="/patient/edit/:id"
+              render={({ match }) => (
+                <Patient match={match} editMode submitButtonText="Update" />
+              )}
+            ></Route>
             <Route exact path="/patient-list" component={PatientList}></Route>
             <Route exact path="/signUp" component={SignUp}></Route>
-            
           </Switch>
+          {/* <Footer /> */}
         </Router>
       </div>
     );
