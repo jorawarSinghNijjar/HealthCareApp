@@ -6,16 +6,72 @@ class Navbar extends React.Component {
     super(props);
 
     this.state = {
-      navbarDisplay: this.props.loggedIn ? "display" : "none"
+      loggedIn: this.props.loggedIn
     };
   }
 
- 
-  
+  mainList = () => {
+    return (
+      <ul className="navbar-nav ml-auto mr-4">
+        <li className="nav-item mx-3">
+          <Link className="nav-link" to="/">
+            Services
+          </Link>
+        </li>
+        <li className="nav-item mx-3">
+          <Link className="nav-link" to="/">
+            Guide
+          </Link>
+        </li>
+        <li className="nav-item mx-3">
+          <Link className="nav-link" to="/">
+            About Us
+          </Link>
+        </li>
+      </ul>
+    );
+  };
+
+  loggedInList = () => {
+    return (
+      <ul className="navbar-nav ml-auto mr-4">
+        <li className="nav-item mx-3">
+          <Link className="nav-link" to="/home">
+            Home
+          </Link>
+        </li>
+        <li className="nav-item mx-3">
+          <Link className="nav-link" to="/patient-list">
+            Patient List
+          </Link>
+        </li>
+        <li className="nav-item mx-3">
+          <Link className="nav-link" to="/patient/register">
+            Register
+          </Link>
+        </li>
+      </ul>
+    );
+  };
+
+  renderNavList = () => {
+    if (this.state.loggedIn) {
+      return this.loggedInList();
+    } else {
+      return this.mainList();
+    }
+  };
+
   render() {
     return (
-      <div style={{display: `${this.state.navbarDisplay}`}}>
+      <div style={{ display: `${this.state.navbarDisplay}` }}>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a className="navbar-brand" href="#">
+            <img
+              className="float-left"
+              src="/images/healthcare-365-logo.png"
+            ></img>
+          </a>
           <button
             className="navbar-toggler"
             type="button"
@@ -29,24 +85,7 @@ class Navbar extends React.Component {
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <ul className="navbar-nav mr-auto">
-          <li className="nav-item">
-            <Link className="nav-link" to="/home">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/patient-list">
-              Patient List
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/patient/register">
-              Register
-            </Link>
-          </li>
-        </ul>
+            {this.renderNavList()}
             {/* <li className="nav-item">
                 <Link className="nav-link" to="/">
                   Login

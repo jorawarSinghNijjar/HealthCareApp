@@ -13,28 +13,28 @@ class SignUp extends React.Component {
     hospitalName: "",
     contactNumber: ""
   };
-  this.welcomeMsg = {
-    subject: "Welcome to the heatlcare-365 services!",
-    text: "Hello Sir/Madam, this is an automated welcome message from our company healthcare-365",
-    html: `
-    <h1>
-    Congrats ${this.state.hospitalName}! This is a welcome message! Congratulations you have signed up with Healthcare-365!
-    </h1>
-    <p>
-    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fwelcome-sign&psig=AOvVaw0LF3e39vPO0zCSxnUbay1z&ust=1585811981485000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOD_sJPYxugCFQAAAAAdAAAAABAE" alt="welcome"/>
-    </p>`
-  };
 
   
 }
   
 
   sendMail = async (userEmail) => {
+    const welcomeMsg = {
+      subject: "Welcome to the heatlcare-365 services!",
+      text: "Hello Sir/Madam, this is an automated welcome message from our company healthcare-365",
+      html: `
+      <h1>
+      Congrats ${this.state.hospitalName}! This is a welcome message! Congratulations you have signed up with Healthcare-365!
+      </h1>
+      <p>
+      </p>`
+    };
+
     await api.post('/send', { 
       userEmail: userEmail,
-      subject: this.welcomeMsg.subject,
-      text: this.welcomeMsg.text,
-      html: this.welcomeMsg.html
+      subject: welcomeMsg.subject,
+      text: welcomeMsg.text,
+      html: welcomeMsg.html
      })
      .then(result => {
        console.log(result)

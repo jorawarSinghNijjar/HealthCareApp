@@ -158,7 +158,7 @@ class Patient extends React.Component {
                       type="text"
                       name="name"
                       className="form-control"
-                      placeholder="Enter patient name"
+                      placeholder="Name"
                       onChange={this.handleNameInput}
                       value={this.state.name}
                     />
@@ -177,7 +177,7 @@ class Patient extends React.Component {
                       type="text"
                       name="phone-number"
                       className="form-control"
-                      placeholder="Enter patient phone number"
+                      placeholder="Phone number"
                       onChange={this.handlePhoneNumberInput}
                       value={this.state.phoneNumber}
                     ></input>

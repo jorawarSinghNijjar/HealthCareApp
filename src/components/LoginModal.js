@@ -45,7 +45,7 @@ class Login extends React.Component {
     console.log("correct id");
     this.setState({ showMessage: false, showModal: false });
     if (this.state.current === "employeeId") {
-      history.push("/login");
+      history.push("/login/pwd");
     }
 
     if (this.state.current === "password") {

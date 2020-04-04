@@ -7,20 +7,25 @@ import HomePage from "./components/HomePage";
 import { Router, Route, Switch, Redirect } from "react-router-dom";
 import history from './components/history';
 import SignUp from "./components/SignUp";
-import PatientProfile from "./components/PateintProfile";
+import LandingPage from "./components/LandingPage";
 
 class App extends React.Component {
 
+  state = {
+    loggedIn: false
+  };
 
   render() {
     return (
       <div>
         <Router history={history}>
-        <Navbar loggedIn/>
+        <Navbar loggedIn={this.state.loggedIn ? true : false}/>
           <Switch>
-            <Route exact path="/" component={LoginPage}></Route>
-            <Route exact path="/login">
-              <Redirect to="/login" /><LoginPage passwordForm />
+            <Route exact path="/" component={LandingPage}></Route>
+            
+            <Route exact path="/login" component={LoginPage}></Route>
+            <Route exact path="/login/pwd">
+              <Redirect to="/login/pwd" /><LoginPage passwordForm />
             </Route> 
             <Route exact path="/home" component={HomePage}></Route>
             <Route exact path="/patient/register">
