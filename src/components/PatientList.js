@@ -9,7 +9,8 @@ class PatientList extends React.Component {
     super(props);
     this.state = {
       patientList: [],
-      currentPatientId: null
+      currentPatientId: null,
+      loaded: false
     };
   }
 
@@ -22,7 +23,8 @@ class PatientList extends React.Component {
       .get("/patients")
       .then(result => {
         this.setState({
-          patientList: result.data.data
+          patientList: result.data.data,
+          loaded: true
         });
       })
       .catch(err => console.log(err));
@@ -40,20 +42,42 @@ class PatientList extends React.Component {
   }
 
   renderPatientList() {
-    return this.state.patientList.map(patient => {
-      return (
-      <PatientListItem patient={patient} callback={this.callback}/>
-      );
-    });
+    
+    if(this.state.loaded){
+      return this.state.patientList.map(patient => {
+        return (
+        <PatientListItem patient={patient} callback={this.callback}/>
+        );
+      });
+    }
   }
 
   renderPatientProfile(){
-    return this.state.patientList.map(patient => {
-      if(patient.id === this.state.currentPatientId)
+    if(!this.state.loaded){
       return (
-        <PatientProfile patient={patient}/>
+        <div>
+          <div className="row">
+            <div className="col-sm-8">
+              <img src="images/loading.gif" className="img-fluid"/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-8">
+              <h2 className="text-center">Loading</h2>
+            </div>
+          </div>
+        </div>
       );
-    });
+    }
+    else{
+      return this.state.patientList.map(patient => {
+        if(patient.id === this.state.currentPatientId)
+        return (
+          <PatientProfile patient={patient}/>
+        );
+      });
+    }
+    
   }
 
   render() {

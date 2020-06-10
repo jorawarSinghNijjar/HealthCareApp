@@ -34,7 +34,6 @@ class Patient extends React.Component {
         
     // }
     componentDidMount(){
-      
       if(this.props.editMode){
         this.populateFields();
       }
@@ -141,20 +140,44 @@ class Patient extends React.Component {
 
   onSubmit = async (e) => {
     e.preventDefault();
-    console.log(checkName(this.state.name))
+    
     if(!this.validate()){
       e.stopPropagation();
       return false;
     }
     let data = [this.state.name,this.state.phoneNumber,this.state.diseaseType];
-    await api.post('/patient',{ data })
-    .then(result => {
+    if(!this.props.editMode){
+      console.log("Register mode");
+      //Register Patient in DB
+      await api.post('/patient',{ data })
+      .then(result => {
         if(!result.data.error){
             // this.showAlert(result.data.message);
             history.push('/patient-list');
         }
-    })
-    .catch(err => console.log(err));
+      })
+      .catch(err => console.log(err));
+    }
+    else{
+      console.log("Edit mode");
+      let id = this.props.match.params.id;
+      let patient = {
+        name: this.state.name,
+        phone_number: this.state.phoneNumber,
+        disease_type: this.state.diseaseType
+      };
+
+      //Update Patient in DB
+      await api.put('/patient',{id, patient})
+      .then(result => {
+        if(!result.data.error){
+            // this.showAlert(result.data.message);
+            history.push('/patient-list');
+        }
+      })
+      .catch(err => console.log(err));
+    }
+    
   }
 
   render() {  
