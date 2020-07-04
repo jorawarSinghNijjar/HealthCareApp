@@ -25,14 +25,14 @@ class PatientProfile extends React.Component{
         
         return (
             <div className="container mx-auto">
-                    <div className="card w-75 mx-auto my-2 shadow p-3 mb-5 bg-white rounded">
+                    <div className="card w-100 mx-auto my-2 shadow p-3 mb-5 bg-white rounded">
                         <div className="row">
                             <div className="col-sm">
                                 <h3>{this.props.patient.name}</h3>
-                                <p>Patient Id: {this.props.patient.id}</p>
-                                <p>Symptoms: {this.props.patient.disease_type}</p>
-                                <p>Contact: {this.props.patient.phone_number}</p>
-                                <p>Doctor assigned: Dr.Yogesh Krotania</p>
+                                <p><strong>Patient Id:</strong> {this.props.patient.id}</p>
+                                <p><strong>Symptoms:</strong> {this.props.patient.disease_type}</p>
+                                <p><strong>Contact:</strong> {this.props.patient.phone_number}</p>
+                                <p><strong>Doctor assigned:</strong> Dr.Yogesh Krotania</p>
                             </div>
                             <div className="col-sm text-center">
                                 <img className="img-thumbnail" src="patient-icon.png" alt="patient" style={{height:"10rem"}}></img>

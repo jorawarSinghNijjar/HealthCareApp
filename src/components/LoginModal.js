@@ -25,6 +25,8 @@ class Login extends React.Component {
       loggedIn: false,
       current: this.props.config.id
     };
+
+    alert("Login ID: 123 and Password: 123");
   }
 
   handleInput = e => {
