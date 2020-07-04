@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+body{
+  margin:0;
+  padding:0;
+}
+
+* {
+  z-index: 1;
+}
+.bg-gradient {
+  background: #16222a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3a6073,
+    #16222a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3a6073,
+    #16222a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.login-page{
+  position: fixed;
+  top:0;
+  background-image: url('../images/login-background.jpg');
+  background-size: cover;
+  height: 100vh;
+  width:100vw;
+  z-index: -2;
+}
+
+.alert{
+    display: none;
+}
+
+/* top margin 30% */
+.mt-30{
+  margin-top: 30vh; 
+}
+
+#list-item:hover{
+  background-color: #01295f;
+  color:white !important;
+}
+
+
+
