@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/HealthCareApp/static/css/main.0bd37175.chunk.css",
-    "main.js": "/HealthCareApp/static/js/main.8ceaa012.chunk.js",
-    "main.js.map": "/HealthCareApp/static/js/main.8ceaa012.chunk.js.map",
+    "main.js": "/HealthCareApp/static/js/main.bf5c3e2a.chunk.js",
+    "main.js.map": "/HealthCareApp/static/js/main.bf5c3e2a.chunk.js.map",
     "runtime-main.js": "/HealthCareApp/static/js/runtime-main.316ebb93.js",
     "runtime-main.js.map": "/HealthCareApp/static/js/runtime-main.316ebb93.js.map",
     "static/js/2.d04fba0c.chunk.js": "/HealthCareApp/static/js/2.d04fba0c.chunk.js",
     "static/js/2.d04fba0c.chunk.js.map": "/HealthCareApp/static/js/2.d04fba0c.chunk.js.map",
     "index.html": "/HealthCareApp/index.html",
-    "precache-manifest.0ad3eb25c15a097d4b9acffed0b7c316.js": "/HealthCareApp/precache-manifest.0ad3eb25c15a097d4b9acffed0b7c316.js",
+    "precache-manifest.2b6234a29da93e640169067d1207876b.js": "/HealthCareApp/precache-manifest.2b6234a29da93e640169067d1207876b.js",
     "service-worker.js": "/HealthCareApp/service-worker.js",
     "static/css/main.0bd37175.chunk.css.map": "/HealthCareApp/static/css/main.0bd37175.chunk.css.map",
     "static/js/2.d04fba0c.chunk.js.LICENSE.txt": "/HealthCareApp/static/js/2.d04fba0c.chunk.js.LICENSE.txt",
@@ -24,6 +24,6 @@
     "static/js/runtime-main.316ebb93.js",
     "static/js/2.d04fba0c.chunk.js",
     "static/css/main.0bd37175.chunk.css",
-    "static/js/main.8ceaa012.chunk.js"
+    "static/js/main.bf5c3e2a.chunk.js"
   ]
 }

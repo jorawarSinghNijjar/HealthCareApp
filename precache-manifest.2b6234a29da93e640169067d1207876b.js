@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7d1b2989f4bb67ecbd761431eedf2987",
+    "revision": "99ea8b869cc51ce4deb0f59705b950c2",
     "url": "/HealthCareApp/index.html"
   },
   {
-    "revision": "54c2bfe25f3ba493c953",
+    "revision": "a932d8d6ceeab6c396ed",
     "url": "/HealthCareApp/static/css/main.0bd37175.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/HealthCareApp/static/js/2.d04fba0c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "54c2bfe25f3ba493c953",
-    "url": "/HealthCareApp/static/js/main.8ceaa012.chunk.js"
+    "revision": "a932d8d6ceeab6c396ed",
+    "url": "/HealthCareApp/static/js/main.bf5c3e2a.chunk.js"
   },
   {
     "revision": "f45fe1e7c80fc490af12",
