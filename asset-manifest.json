@@ -1,19 +1,29 @@
 {
   "files": {
-    "main.js": "/HealthCareApp/static/js/main.96096f65.chunk.js",
-    "main.js.map": "/HealthCareApp/static/js/main.96096f65.chunk.js.map",
+    "main.css": "/HealthCareApp/static/css/main.0bd37175.chunk.css",
+    "main.js": "/HealthCareApp/static/js/main.5a767f2f.chunk.js",
+    "main.js.map": "/HealthCareApp/static/js/main.5a767f2f.chunk.js.map",
     "runtime-main.js": "/HealthCareApp/static/js/runtime-main.316ebb93.js",
     "runtime-main.js.map": "/HealthCareApp/static/js/runtime-main.316ebb93.js.map",
-    "static/js/2.66de9e67.chunk.js": "/HealthCareApp/static/js/2.66de9e67.chunk.js",
-    "static/js/2.66de9e67.chunk.js.map": "/HealthCareApp/static/js/2.66de9e67.chunk.js.map",
+    "static/js/2.d04fba0c.chunk.js": "/HealthCareApp/static/js/2.d04fba0c.chunk.js",
+    "static/js/2.d04fba0c.chunk.js.map": "/HealthCareApp/static/js/2.d04fba0c.chunk.js.map",
     "index.html": "/HealthCareApp/index.html",
-    "precache-manifest.af70d94869e1785928a2a0e953c52278.js": "/HealthCareApp/precache-manifest.af70d94869e1785928a2a0e953c52278.js",
+    "precache-manifest.f46a6a13a79fe5ce3e53fbb2ffc3a2d9.js": "/HealthCareApp/precache-manifest.f46a6a13a79fe5ce3e53fbb2ffc3a2d9.js",
     "service-worker.js": "/HealthCareApp/service-worker.js",
-    "static/js/2.66de9e67.chunk.js.LICENSE.txt": "/HealthCareApp/static/js/2.66de9e67.chunk.js.LICENSE.txt"
+    "static/css/main.0bd37175.chunk.css.map": "/HealthCareApp/static/css/main.0bd37175.chunk.css.map",
+    "static/js/2.d04fba0c.chunk.js.LICENSE.txt": "/HealthCareApp/static/js/2.d04fba0c.chunk.js.LICENSE.txt",
+    "static/media/homepage.jpg": "/HealthCareApp/static/media/homepage.c3b33851.jpg",
+    "static/media/landing-page-text-image.jpg": "/HealthCareApp/static/media/landing-page-text-image.d96fe036.jpg",
+    "static/media/loading.gif": "/HealthCareApp/static/media/loading.b11a6b06.gif",
+    "static/media/login-background.jpg": "/HealthCareApp/static/media/login-background.ba6bcd28.jpg",
+    "static/media/main-jumbotron.jpg": "/HealthCareApp/static/media/main-jumbotron.e5723599.jpg",
+    "static/media/patient-icon.png": "/HealthCareApp/static/media/patient-icon.4176a1e0.png",
+    "static/media/signUpBanner.jpg": "/HealthCareApp/static/media/signUpBanner.f99a3d10.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.316ebb93.js",
-    "static/js/2.66de9e67.chunk.js",
-    "static/js/main.96096f65.chunk.js"
+    "static/js/2.d04fba0c.chunk.js",
+    "static/css/main.0bd37175.chunk.css",
+    "static/js/main.5a767f2f.chunk.js"
   ]
 }
