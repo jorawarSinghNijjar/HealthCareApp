@@ -3,6 +3,8 @@ import PatientListItem from "./PatientListItem";
 import api from "../api/data_api";
 import PatientProfile from './PateintProfile';
 
+import loadingSpinner from '../images/loading.gif';
+
 
 class PatientList extends React.Component {
   constructor(props) {
@@ -58,7 +60,7 @@ class PatientList extends React.Component {
         <div>
           <div className="row">
             <div className="col-sm-8">
-              <img src="images/loading.gif" className="img-fluid"/>
+              <img src={loadingSpinner} className="img-fluid"/>
             </div>
           </div>
           <div className="row">

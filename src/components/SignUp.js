@@ -1,6 +1,7 @@
 import React from "react";
 import api from '../api/data_api';
 import history from './history';
+import signUpBanner from '../images/signUpBanner.jpg';
 
 class SignUp extends React.Component {
 
@@ -23,11 +24,11 @@ class SignUp extends React.Component {
       subject: "Welcome to the heatlcare-365 services!",
       text: "Hello Sir/Madam, this is an automated welcome message from our company healthcare-365",
       html: `
-      <h1>
+      <h2>
       Congrats ${this.state.hospitalName}! This is a welcome message! Congratulations you have signed up with Healthcare-365!
-      </h1>
-      <p>
-      </p>`
+      </h2>
+      <h2> Demo username is: 123 and password: 123</h2>
+      `
     };
 
     await api.post('/send', { 
@@ -74,7 +75,7 @@ class SignUp extends React.Component {
       <div>
         <div className="row">
           <img
-            src="images/signUpBanner.jpg"
+            src={signUpBanner}
             style={{ height: "60vh", width: "100vw" }}
           ></img>
         </div>

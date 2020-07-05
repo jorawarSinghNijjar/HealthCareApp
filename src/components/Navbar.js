@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from '../images/healthcare-365-logo.png';
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -74,7 +75,7 @@ class Navbar extends React.Component {
           <Link to="/" className="navbar-brand">
             <img
               className="float-left"
-              src="/images/healthcare-365-logo.png"
+              src={logo}
             ></img>
           </Link>
           <button

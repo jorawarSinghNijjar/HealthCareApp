@@ -1,11 +1,16 @@
 import React from "react";
 
 import Login from "./LoginModal";
+import '../css/main.css';
+
+import loginBackground from '../images/login-background.jpg';
 
 class LoginPage extends React.Component {
   constructor(props){
     super(props);
     console.log(props);
+
+    
 
     this.employeeIdConfig = {
       label: "Employee ID",
@@ -38,8 +43,9 @@ class LoginPage extends React.Component {
 
 
   render() {
+
     return (
-      <div className="login-page">
+      <div className="login-page" >
         
         {this.renderModal()}
       </div>

@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import api from "../api/data_api";
 import {Link} from 'react-router-dom';
+import patientPhoto from '../images/patient-icon.png';
 
 class PatientProfile extends React.Component{
     constructor(props){
@@ -35,7 +36,7 @@ class PatientProfile extends React.Component{
                                 <p><strong>Doctor assigned:</strong> Dr.Yogesh Krotania</p>
                             </div>
                             <div className="col-sm text-center">
-                                <img className="img-thumbnail" src="patient-icon.png" alt="patient" style={{height:"10rem"}}></img>
+                                <img className="img-thumbnail" src={patientPhoto} alt="patient" style={{height:"10rem"}}></img>
                             </div>
                         </div>
                         <hr/>

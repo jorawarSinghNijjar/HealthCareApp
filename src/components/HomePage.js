@@ -1,14 +1,15 @@
 import React from "react";
 import {Link} from 'react-router-dom';
+import homepageBackground from '../images/homepage.jpg';
 const HomePage = () => {
   return (
     <div>
       <div
         className="jumbotron jumbotron-fluid"
         style={{
-          backgroundImage: 'url("/images/homepage.jpg")',
+          backgroundImage: `url(${homepageBackground})`,
           height: "100vh",
-          backgroundSize: "cover"
+          backgroundSize: "cover",
         }}
       >
         <div className="container">
