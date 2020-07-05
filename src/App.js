@@ -21,7 +21,6 @@ class App extends React.Component {
         <Router history={history}>
           <Navbar loggedIn={this.state.loggedIn ? true : false} />
           <Switch>
-            <Route exact path="/HealthCareApp/" component={LandingPage}></Route>
             <Route exact path="/login" component={LoginPage}></Route>
             <Route exact path="/login/pwd">
               <Redirect to="/login/pwd" />
@@ -39,6 +38,7 @@ class App extends React.Component {
             ></Route>
             <Route exact path="/patient-list" component={PatientList}></Route>
             <Route exact path="/signUp" component={SignUp}></Route>
+            <Route path="/" component={LandingPage}></Route>
           </Switch>
           {/* <Footer /> */}
         </Router>
