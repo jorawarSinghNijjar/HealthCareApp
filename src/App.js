@@ -21,7 +21,7 @@ class App extends React.Component {
         <Router history={history}>
           <Navbar loggedIn={this.state.loggedIn ? true : false} />
           <Switch>
-            <Route exact path="/HealthCareApp" component={LandingPage}></Route>
+            <Route exact path="/HealthCareApp/" component={LandingPage}></Route>
             <Route exact path="/login" component={LoginPage}></Route>
             <Route exact path="/login/pwd">
               <Redirect to="/login/pwd" />
