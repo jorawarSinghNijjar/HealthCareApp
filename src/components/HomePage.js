@@ -7,13 +7,14 @@ const HomePage = () => {
       <div
         className="jumbotron jumbotron-fluid"
         style={{
-          backgroundImage: `url(${homepageBackground})`,
+          background: 'rgb(255,255,255)',
+          background: `linear-gradient(321deg, rgba(255,255,255,.5) 0%, rgba(126,126,224,0.7147058652562588) 90%), url(${homepageBackground})`,
           height: "100vh",
           backgroundSize: "cover",
         }}
       >
         <div className="container">
-          <div className="row">
+          <div className="row p-4">
           <h1 className="display-4">Welcome to our Health care service!</h1>
           <p className="lead">
             We care for the employees and provide user friendly applications!

@@ -76,7 +76,7 @@ class SignUp extends React.Component {
         <div className="row">
           <img
             src={signUpBanner}
-            style={{ height: "60vh", width: "100vw" }}
+            style={{ height: "auto", maxWidth: "100%" }}
           ></img>
         </div>
         <div className="row my-4">

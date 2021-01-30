@@ -1,7 +1,8 @@
 import React from "react";
 import { Animated } from "react-animated-css";
 import history from "./history";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../css/alert.css';
 
 const validate = (inputVal, correctVal) => {
   if (inputVal !== correctVal) {
@@ -26,7 +27,8 @@ class Login extends React.Component {
       current: this.props.config.id
     };
 
-    alert("Login ID: 123 and Password: 123");
+
+    // alert("Login ID: 123 and Password: 123");
   }
 
   handleInput = e => {
@@ -67,6 +69,8 @@ class Login extends React.Component {
             <div className="col-md-4 mx-auto">
               <div className="card">
                 <div className="card-body">
+                  {/* <button id="demo-hint" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Demo Employee ID: 123 and Password: 123">
+                    Click here for Demo ID</button> */}
                   <h3 className="card-title text-center">Log in</h3>
                   <hr />
                   <form
@@ -107,7 +111,7 @@ class Login extends React.Component {
                       </button>
                     </div>
                     <div className="form-group">
-                      <Link to="/signUp" style={{textDecoration: "none"}}>
+                      <Link to="/signUp" style={{ textDecoration: "none" }}>
                         <button className="btn btn-warning btn-block">
                           Sign Up
                         </button>
