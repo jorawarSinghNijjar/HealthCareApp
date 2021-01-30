@@ -2,6 +2,7 @@ import React from "react";
 import { Animated } from "react-animated-css";
 import history from "./history";
 import { Link } from 'react-router-dom';
+import { Button, Modal } from 'react-bootstrap';
 import '../css/alert.css';
 
 const validate = (inputVal, correctVal) => {
@@ -24,11 +25,18 @@ class Login extends React.Component {
       showModal: true,
       showMessage: false,
       loggedIn: false,
-      current: this.props.config.id
+      current: this.props.config.id,
+      showDemoModal: true
     };
 
 
     // alert("Login ID: 123 and Password: 123");
+  }
+
+  handleDemoModalClose = () => {
+    this.setState({
+      showDemoModal: false
+    });
   }
 
   handleInput = e => {
@@ -60,6 +68,13 @@ class Login extends React.Component {
   render() {
     return (
       <div>
+        <Modal show={this.state.showDemoModal} onHide={this.handleDemoModalClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Demo Details</Modal.Title>
+          </Modal.Header>
+          <Modal.Body><p><strong>Employee ID:</strong> 123</p>
+            <p><strong>Password:</strong> 123</p></Modal.Body>
+        </Modal>
         <Animated
           animationIn="fadeInLeft"
           animationOut="fadeOutRight"
@@ -69,8 +84,6 @@ class Login extends React.Component {
             <div className="col-md-4 mx-auto">
               <div className="card">
                 <div className="card-body">
-                  {/* <button id="demo-hint" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Demo Employee ID: 123 and Password: 123">
-                    Click here for Demo ID</button> */}
                   <h3 className="card-title text-center">Log in</h3>
                   <hr />
                   <form
